@@ -14,7 +14,7 @@ This theme contains two versions: Ice and Blaze.
 
 ## Support
 
-If you found this extension useful, you can buy me a coffee ☕️
+If you loved this theme, consider buying me a coffee ☕️
 
 <a href="https://ko-fi.com/ayushmxxn" target="_blank">
     <a href='https://ko-fi.com/H2H6WCASE' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>

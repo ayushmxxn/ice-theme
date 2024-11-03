@@ -14,10 +14,10 @@ This theme contains two versions: Ice and Blaze.
 
 ## Support
 
-If you find these themes useful and would like to support its development, consider buying me a coffee! ☕️
+If you found this extension useful, you can buy me a coffee ☕️
 
-<a href="https://www.buymeacoffee.com/ayushmxxn" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 180px !important;">
+<a href="https://ko-fi.com/ayushmxxn" target="_blank">
+    <a href='https://ko-fi.com/H2H6WCASE' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </a>
 
 ## Syntax Palette

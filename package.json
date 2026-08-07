@@ -1,7 +1,7 @@
 {
   "name": "blazetheme",
   "displayName": "Ice Theme",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "publisher": "AyushmaanSingh",
   "description": "A clean and modern theme pack for Visual Studio Code.",
   "main": "extension/extension.js",

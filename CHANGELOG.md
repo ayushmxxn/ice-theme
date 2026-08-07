@@ -2,7 +2,7 @@
 
 All notable changes to the Ice Theme extension are documented in this file.
 
-## [2.2.1] - 2026-08-07
+## [2.2.2] - 2026-08-07
 
 ### Removed
 

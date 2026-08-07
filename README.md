@@ -6,11 +6,11 @@ A clean and modern theme pack for Visual Studio Code.
 
 ## Installation
 
-**1.** Open the **Extensions** view (`Ctrl` + `Shift` + `X`).<br>
-**2.** Search for **Ice Theme**.<br>
-**3.** Click **Install**.<br>
-**4.** Open **Preferences → Color Theme** (`Ctrl` + `K`, `Ctrl` + `T`).<br>
-**5.** Select **Ice** or **Blaze**.
+Open the **Extensions** view (`Ctrl` + `Shift` + `X`).<br>
+Search for **Ice Theme**.<br>
+Click **Install**.<br>
+Open **Preferences → Color Theme** (`Ctrl` + `K`, `Ctrl` + `T`).<br>
+Select **Ice** or **Blaze**.
 
 ## Feedback
 

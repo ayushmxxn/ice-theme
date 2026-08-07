@@ -1,75 +1,87 @@
-const vscode = require('vscode');
+const vscode = require("vscode");
 
-async function activate(context) {
-   
-    async function changeFontFamilyPrompt() {
-        
-        const fontFamilyPromptResult = await vscode.window.showInformationMessage(
-            'Hey there! 👋 Would you like to change your font family to our recommended font family?',
-            'Sure, sounds good!', 'No, thanks'
+const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
+const MAX_PROMPT_COUNT = 2;
+
+const REVIEW_URL =
+  "https://marketplace.visualstudio.com/items?itemName=AyushmaanSingh.blazetheme&ssr=false#review-details";
+
+async function checkReviewPrompt(context) {
+  if (context.globalState.get("reviewPromptDisabled", false)) {
+    return;
+  }
+
+  const promptCount = context.globalState.get("reviewPromptCount", 0);
+
+  if (promptCount >= MAX_PROMPT_COUNT) {
+    await context.globalState.update("reviewPromptDisabled", true);
+    return;
+  }
+
+  const now = Date.now();
+  const firstActivationDate = context.globalState.get(
+    "reviewPromptFirstActivationDate",
+  );
+
+  if (!firstActivationDate) {
+    await context.globalState.update("reviewPromptFirstActivationDate", now);
+    return;
+  }
+
+  if (now - firstActivationDate < SEVEN_DAYS_MS) {
+    return;
+  }
+
+  const snoozedUntil = context.globalState.get("reviewPromptSnoozedUntil", 0);
+
+  if (now < snoozedUntil) {
+    return;
+  }
+
+  const newPromptCount = promptCount + 1;
+
+  await context.globalState.update("reviewPromptCount", newPromptCount);
+
+  if (newPromptCount >= MAX_PROMPT_COUNT) {
+    await context.globalState.update("reviewPromptDisabled", true);
+  }
+
+  const selection = await vscode.window.showInformationMessage(
+    "Enjoying Ice Theme?\nA quick ★★★★★ review helps more developers discover it.",
+    "⭐ Leave a Review",
+    "Later",
+    "Don't Ask Again",
+  );
+
+  switch (selection) {
+    case "⭐ Leave a Review":
+      await context.globalState.update("reviewPromptDisabled", true);
+      await vscode.env.openExternal(vscode.Uri.parse(REVIEW_URL));
+      break;
+
+    case "Don't Ask Again":
+      await context.globalState.update("reviewPromptDisabled", true);
+      break;
+
+    case "Later":
+      if (newPromptCount < MAX_PROMPT_COUNT) {
+        await context.globalState.update(
+          "reviewPromptSnoozedUntil",
+          now + THIRTY_DAYS_MS,
         );
-
-        if (fontFamilyPromptResult === 'Sure, sounds good!') {
-            
-            vscode.workspace.getConfiguration().update(
-                "editor.fontFamily", "Monaco, Consolas, 'Courier New', monospace", vscode.ConfigurationTarget.Global);
-            
-            vscode.window.showInformationMessage('Font family updated! ✨');
-        } else if (fontFamilyPromptResult === 'No, thanks') {
-            
-            context.globalState.update("fontFamilyPromptDeclined", true);
-        }
-    }
-
-
-    async function showReviewPrompt() {
-       
-        const reviewPromptResult = await vscode.window.showInformationMessage(
-            '⭐ Enjoying Ice Theme? Please leave a review to support us. It only takes a moment!',
-            'Leave a Review', 'Not Now'
-        );
-
-        if (reviewPromptResult === 'Leave a Review') {
-            
-            vscode.env.openExternal(vscode.Uri.parse('https://marketplace.visualstudio.com/items?itemName=AyushmaanSingh.blazetheme&ssr=false#review-details'));
-            
-            context.globalState.update("reviewPromptClicked", true);
-        }
-    }
-
-    
-    const themeSettings = vscode.workspace.getConfiguration().get("workbench.colorTheme");
-
-    
-    if (!themeSettings || themeSettings !== "Ice Theme") {
-        
-        const fontFamilyPromptDeclined = context.globalState.get("fontFamilyPromptDeclined");
-        if (!fontFamilyPromptDeclined) {
-            changeFontFamilyPrompt();
-        }
-    }
-
-    
-    const lastPromptDate = context.globalState.get("lastReviewPromptDate");
-    const reviewPromptClicked = context.globalState.get("reviewPromptClicked");
-    const installationDate = context.globalState.get("installationDate");
-    const today = new Date();
-    const sevenDaysAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
-
-   
-    if (installationDate && today.getTime() - installationDate > 7 * 24 * 60 * 60 * 1000) {
-        
-        if (!reviewPromptClicked && lastPromptDate && new Date(lastPromptDate) < sevenDaysAgo) {
-            showReviewPrompt();
-           
-            context.globalState.update("lastReviewPromptDate", today);
-        }
-    } else {
-       
-        if (!installationDate) {
-            context.globalState.update("installationDate", today.getTime());
-        }
-    }
+      }
+      break;
+  }
 }
 
-exports.activate = activate;
+function activate(context) {
+  checkReviewPrompt(context).catch(console.error);
+}
+
+function deactivate() {}
+
+module.exports = {
+  activate,
+  deactivate,
+};

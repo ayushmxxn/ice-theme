@@ -1,33 +1,40 @@
 {
   "name": "blazetheme",
   "displayName": "Ice Theme",
-  "version": "2.2.0",
-  "main": "extension/extension.js",
-  "activationEvents": ["onStartupFinished" ],
+  "version": "2.2.1",
   "publisher": "AyushmaanSingh",
-  "description": "Icy tones create a serene workspace.",
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "Ice Theme",
-    "ice theme",
-    "icy tones",
-    "cool theme",
-    "dark theme",
-    "VS Code",
-    "theme",
-    "Dark",
-    "Blue"
+  "description": "A clean and modern theme pack for Visual Studio Code.",
+  "main": "extension/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
   ],
   "engines": {
     "vscode": "^1.88.0"
   },
-  "icon": "Ice/extension/logo.png",
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "vscode theme",
+    "dark theme",
+    "color theme",
+    "ice theme",
+    "blaze theme",
+    "blue theme",
+    "minimal",
+    "modern",
+    "developer",
+    "syntax highlighting"
+  ],
+  "icon": "extension/logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayushmxxn/Ice-Theme"
+    "url": "https://github.com/ayushmxxn/ice-theme"
   },
+  "bugs": {
+    "url": "https://github.com/ayushmxxn/ice-theme/issues"
+  },
+  "homepage": "https://github.com/ayushmxxn/ice-theme#readme",
   "contributes": {
     "themes": [
       {
@@ -40,17 +47,6 @@
         "uiTheme": "vs-dark",
         "path": "./Blaze/themes/blaze-color-theme.json"
       }
-    ],
-    "configuration": {
-      "type": "object",
-      "title": "My Extension Settings",
-      "properties": {
-        "editor.fontFamily": {
-          "type": "string",
-          "default": "Monaco, Consolas, 'Courier New', monospace",
-          "description": "Specifies the font family for the editor."
-        }
-      }
-    }
+    ]
   }
 }

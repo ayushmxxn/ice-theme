@@ -1,0 +1,18 @@
+# Build artifacts
+*.vsix
+
+# Node dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local test runner output
+.vscode-test/

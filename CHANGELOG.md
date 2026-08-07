@@ -1,68 +1,75 @@
-# Change Log
+# Changelog
 
-All notable changes to the Ice Theme extension will be documented in this file.
+All notable changes to the Ice Theme extension are documented in this file.
 
-## [2.2.0] - 2024-6-05
+## [2.2.1] - 2026-08-07
+
+### Removed
+
+- Removed the font prompt.
+
+## [2.2.0] - 2024-06-05
 
 ### Updated
 
-- Updated github username
-- Updated twitter username
+- Updated GitHub username.
+- Updated X (Twitter) username.
 
-## [2.1.1] - 2024-19-04
+## [2.1.1] - 2024-04-19
 
 ### Fixed
 
-- Fixed the font family not retaining issue.
+- Fixed the font family not being retained.
 
-## [2.1.0] - 2024-16-04
+## [2.1.0] - 2024-04-16
 
 ### Improved
 
 - Improved the Blaze theme.
-- Improved the Ice Theme.
+- Improved the Ice theme.
 
-## [1.0.5] - 2024-11-04
+## [1.0.5] - 2024-04-11
 
 ### Improved
 
-- Improved readability for Imports, Variables, and Functions.
+- Improved syntax highlighting for imports, variables, and functions.
 
-## [1.0.4] - 2024-05-04
+## [1.0.4] - 2024-04-05
 
 ### Updated
 
-- Updated theme to be compatible with new VS Code version 1.88.0.
+- Updated the theme for compatibility with VS Code 1.88.
 
 ## [1.0.3] - 2024-04-04
 
 ### Fixed
 
-- Corrected the default font issue.
+- Fixed the default font issue.
 
 ### Improved
 
-- Improved styling of the suggest widget.
-- Improved styling of tabs in the Blaze theme.
+- Improved the Suggest widget styling.
+- Improved tab styling in the Blaze theme.
 
 ## [1.0.2] - 2024-04-03
 
 ### Fixed
 
-- Corrected typo in README.
-- Fixed incorrect path to the extension.
+- Fixed a typo in the README.
+- Fixed the extension path.
 
 ## [1.0.0] - 2024-04-03
 
 ### Added
 
-- Initial release of the Ice Theme extension.
-- Rebranded extension icon, name, and description.
-- Added new README file containing information about the new Ice Theme and previous Blaze Theme.
-- Set default font to 'Monaco, Consolas, Courier New, monospace' for both Ice and Blaze themes.
+- Initial release of Ice Theme.
+- Added the Ice and Blaze themes.
+- Updated the extension name, icon, and branding.
+- Added a README.
+- Set the default editor font to Monaco, Consolas, Courier New, and monospace.
 
-## [0.0.6] - 2024-04-1
+## [0.0.6] - 2024-04-01
 
 ### Added
 
-- Initial release of the Blaze Theme.
+- Initial release of Blaze Theme.

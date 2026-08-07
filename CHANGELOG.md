@@ -2,6 +2,21 @@
 
 All notable changes to the Ice Theme extension are documented in this file.
 
+## [2.2.4] - 2026-08-07
+
+### Updated
+
+- Updated the changelog for the previous release.
+
+## [2.2.3] - 2026-08-07
+
+### Improved
+
+- Improved the README.
+- Improved the installation instructions.
+- Fixed the MIT License link.
+- Updated the VS Code Marketplace page.
+
 ## [2.2.2] - 2026-08-07
 
 ### Removed

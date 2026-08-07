@@ -1,6 +1,6 @@
 # Ice Theme
 
-"A clean and modern theme pack for Visual Studio Code."
+A clean and modern theme pack for Visual Studio Code.
 
 ![Ice Theme Preview](./images/theme-preview.gif)
 

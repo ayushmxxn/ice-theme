@@ -3,7 +3,7 @@
   "displayName": "Ice Theme",
   "version": "2.2.4",
   "publisher": "AyushmaanSingh",
-  "description": "A clean and modern theme pack for Visual Studio Code.",
+  "description": "A Calm Dark Theme for Code Editors 🧊",
   "main": "extension/extension.js",
   "activationEvents": [
     "onStartupFinished"

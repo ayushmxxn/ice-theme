@@ -1,3 +1,5 @@
+## Ice Theme | A Calm Dark Theme for Code Editors 🧊
+
 ![Ice Theme Preview](./images/ice-theme-preview.webp)
 
 ## Installation

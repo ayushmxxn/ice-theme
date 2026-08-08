@@ -1,7 +1,5 @@
 # Ice Theme
 
-A clean and modern theme pack for Visual Studio Code.
-
 ![Ice Theme Preview](./images/ice-theme-preview.webp)
 
 ## Installation

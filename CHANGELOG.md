@@ -2,6 +2,12 @@
 
 All notable changes to the Ice Theme extension are documented in this file.
 
+## [2.2.5] - 2026-08-09
+
+### Updated
+
+- Updated and improved the README.
+
 ## [2.2.4] - 2026-08-07
 
 ### Updated
